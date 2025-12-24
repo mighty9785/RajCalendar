@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Rajasthan Government Calendar 2026 | Official Month-wise Slider</title>
+    <meta name="description" content="View and download the official Rajasthan Government Calendar 2026. Interactive slider for all months, public holidays, and PDF download. Rajasthan Calendar 2026 in Hindi & English.">
+    <meta name="keywords" content="Rajasthan Government Calendar 2026, Rajasthan Calendar 2026, Rajasthan Calendar 2026 in Hindi, Rajasthan Calendar 2026 PDF, Rajasthan Sarkar Calendar 2026">
+    <meta name="author" content="Rajasthan Calendar Portal">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rajasthan-calendar-2026.web.app/">
+    <meta property="og:title" content="Rajasthan Government Calendar 2026 - Official Holidays">
+    <meta property="og:description" content="Interactive Rajasthan Government Calendar 2026. Slide through months and check holidays.">
+    <meta property="og:image" content="https://placehold.co/1200x630/e11d48/ffffff?text=Rajasthan+Calendar+2026">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Rajasthan Government Calendar 2026">
+    <meta property="twitter:description" content="Official Rajasthan Government Calendar 2026 view and download.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/e11d48/ffffff?text=Rajasthan+Calendar+2026">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans"', 'sans-serif'],
+                        hindi: ['"Noto Serif Devanagari"', 'serif'],
+                    },
+                    colors: {
+                        raj: {
+                            sand: '#fdfbf7',     // Background
+                            gold: '#d4af37',     // Accents
+                            pink: '#be123c',     // Jaipur Pink
+                            royal: '#1e3a8a',    // Royal Blue
+                            stone: '#78350f',    // Text
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar for the page */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #be123c;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9f1239;
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        /* Hide scrollbar for the slider but allow functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        /* Image Loading Skeleton Animation */
+        .image-skeleton {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            background-color: #e5e7eb;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+    </style>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GovernmentPermit",
+      "name": "Rajasthan Government Calendar 2026",
+      "description": "Official calendar of the Government of Rajasthan for the year 2026.",
+      "contentLocation": { "@type": "Place", "name": "Rajasthan, India" },
+      "inLanguage": ["en", "hi"],
+      "datePublished": "2025-10-01"
+    }
+    </script>
+</head>
+<body class="bg-raj-sand text-gray-800 font-sans smooth-scroll antialiased selection:bg-raj-pink selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-orange-100 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center">
+      
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8  rounded-full flex items-center justify-center overflow-hidden p-1">
+    <img
+      src="Images/Governmentlogo.png"
+      alt="Satyameva Jayate Emblem"
+      class="w-full h-full object-contain"
+    >
+</div>
+        <span class="font-bold text-lg md:text-xl text-raj-royal tracking-tight">RajGov<span class="text-raj-pink">Calendar</span></span>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
+        <a href="#slider-section" class="hover:text-raj-pink transition-colors">Current Month</a>
+        <a href="#calendar-grid" class="hover:text-raj-pink transition-colors">All Months</a>
+        <a href="#holidays" class="hover:text-raj-pink transition-colors">Holidays</a>
+        <a href="Pdf/RajsathanGovernmentCalender2026.pdf" class="px-4 py-2 bg-raj-royal  text-white rounded-lg hover:bg-raj-royal transition-colors shadow-md">Download PDF</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-raj-pink focus:outline-none">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+    <div class="flex flex-col px-4 py-4 space-y-4 font-medium">
+      <a href="#slider-section" class="block text-gray-600 hover:text-raj-pink">Current Month</a>
+      <a href="#calendar-grid" class="block text-gray-600 hover:text-raj-pink">All Months</a>
+      <a href="#holidays" class="block text-gray-600 hover:text-raj-pink">Holidays</a>
+      <a href="#download" class="block text-center w-full py-2 bg-raj-pink text-white rounded-lg">Download PDF</a>
+    </div>
+  </div>
+</nav>
+
+    <!-- Main Slider Section (Hero) -->
+    <section id="slider-section" class="relative bg-gradient-to-b from-orange-50 to-raj-sand pt-6 pb-12 overflow-hidden min-h-[85vh] flex flex-col justify-center">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-2 sm:px-4 w-full relative z-10">
+            <!-- Header Text -->
+            <div class="text-center ">
+            <p class="text-sm text-gray-500 ">Swipe or use arrows to navigate</p>
+
+            </div>
+
+            <!-- Slider Container -->
+            <div class="relative group max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto">
+                
+                <!-- Previous Button -->
+                <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-12 z-20 bg-white/80 hover:bg-white text-raj-royal p-3 rounded-full shadow-lg backdrop-blur-sm transition-all border border-gray-200" aria-label="Previous Month">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+
+                <!-- Scrollable Area -->
+                <div id="calendar-slider" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar rounded-xl shadow-2xl border-4 border-white bg-white">
+                    
+                    <!-- Month 1: January -->
+                    <div class="min-w-full snap-center flex flex-col items-center relative" id="slide-0">
+                        <div class="w-full bg-raj-royal text-white py-2 text-center font-bold font-hindi text-lg">January / जनवरी 2026</div>
+                        <img src="Images/January.jpg" alt="Rajasthan Calendar January 2026" class="w-full h-auto object-contain " loading="eager">
+                    </div>
+
+                    <!-- Month 2: February -->
+                    <div class="min-w-full snap-center flex flex-col items-center relative" id="slide-1">
+                        <div class="w-full bg-raj-pink text-white py-2 text-center font-bold font-hindi text-lg">February / फरवरी 2026</div>
+                        <img src="Images/February.jpg" alt="Rajasthan Calendar February 2026" class="w-full h-auto object-contain " loading="lazy">
+                    </div>
+
+                    <!-- Month 3: March -->
+                    <div class="min-w-full snap-center flex flex-col items-center relative" id="slide-2">
+                        <div class="w-full bg-orange-600 text-white py-2 text-center font-bold font-hindi text-lg">March / मार्च 2026</div>
+                        <img src="Images/March.jpg" alt="Rajasthan Calendar March 2026" class="w-full h-auto object-contain " loading="lazy">
+                    </div>
+
+                    <!-- Month 4: April -->
+                    <div class="min-w-full snap-center flex flex-col items-center relative" id="slide-3">
+                        <div class="w-full bg-green-600 text-white py-2 text-center font-bold font-hindi text-lg">April / अप्रैल 2026</div>
+                        <img src="Images/April.jpg" alt="Rajasthan Calendar April 2026" class="w-full h-auto object-contain " loading="lazy">
+                    </div>
+
+                    <!-- Month 5: May -->
+                    <div class="min-w-full snap-center flex flex-col items-center relative" id="slide-4">
+                        <div class="w-full bg-red-700 text-white py-2 text-center font-bold font-hindi text-lg">May / मई 2026</div>
+                        <img src="Images/May.jpg" alt="Rajasthan Calendar May 2026" class="w-full h-auto object-contain " loading="lazy">
+                    </div>
+
+                    <!-- Month 6: June -->
+                    <div class="min-w-full snap-center flex flex-col items-center relative" id="slide-5">
+                        <div class="w-full bg-gray-600 text-white py-2 text-center font-bold font-hindi text-lg">June / जून 2026</div>
+                        <img src="Images/June.jpg" alt="Rajasthan Calendar June 2026" class="w-full h-auto object-contain " loading="lazy">
+                    </div>
+
+                    <!-- Month 7: July -->
+                    <div class="min-w-full snap-center flex flex-col items-center relative" id="slide-6">
+                        <div class="w-full bg-teal-700 text-white py-2 text-center font-bold font-hindi text-lg">July / जुलाई 2026</div>
+                        <img src="Images/July.jpg" alt="Rajasthan Calendar July 2026" class="w-full h-auto object-contain " loading="lazy">
+                    </div>
+
+                    <!-- Month 8: August -->
+                    <div class="min-w-full snap-center flex flex-col items-center relative" id="slide-7">
+                        <div class="w-full bg-raj-pink text-white py-2 text-center font-bold font-hindi text-lg">August / अगस्त 2026</div>
+                        <img src="Images/August.jpg" alt="Rajasthan Calendar August 2026" class="w-full h-auto object-contain " loading="lazy">
+                    </div>
+
+                    <!-- Month 9: September -->
+                    <div class="min-w-full snap-center flex flex-col items-center relative" id="slide-8">
+                        <div class="w-full bg-blue-700 text-white py-2 text-center font-bold font-hindi text-lg">September / सितंबर 2026</div>
+                        <img src="Images/September.jpg" alt="Rajasthan Calendar September 2026" class="w-full h-auto object-contain " loading="lazy">
+                    </div>
+
+                    <!-- Month 10: October -->
+                    <div class="min-w-full snap-center flex flex-col items-center relative" id="slide-9">
+                        <div class="w-full bg-yellow-700 text-white py-2 text-center font-bold font-hindi text-lg">October / अक्टूबर 2026</div>
+                        <img src="Images/October.jpg" alt="Rajasthan Calendar October 2026" class="w-full h-auto object-contain " loading="lazy">
+                    </div>
+
+                    <!-- Month 11: November -->
+                    <div class="min-w-full snap-center flex flex-col items-center relative" id="slide-10">
+                        <div class="w-full bg-raj-pink text-white py-2 text-center font-bold font-hindi text-lg">November / नवंबर 2026</div>
+                        <img src="Images/November.jpg" alt="Rajasthan Calendar November 2026" class="w-full h-auto object-contain " loading="lazy">
+                    </div>
+
+                    <!-- Month 12: December -->
+                    <div class="min-w-full snap-center flex flex-col items-center relative" id="slide-11">
+                        <div class="w-full bg-green-700 text-white py-2 text-center font-bold font-hindi text-lg">December / दिसंबर 2026</div>
+                        <img src="Images/December.jpg" alt="Rajasthan Calendar December 2026" class="w-full h-auto object-contain " loading="lazy">
+                    </div>
+
+                </div>
+
+                <!-- Next Button -->
+                <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-12 z-20 bg-white/80 hover:bg-white text-raj-royal p-3 rounded-full shadow-lg backdrop-blur-sm transition-all border border-gray-200" aria-label="Next Month">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <div class="text-center mb-6">
+                <span class="inline-block py-1 px-3 rounded-full bg-orange-100 text-raj-pink text-xs font-bold tracking-wider mb-2 uppercase">Official 2026 Release</span>
+                <h1 class="text-2xl md:text-4xl font-bold text-gray-900">
+                    Rajasthan Government Calendar <span class="text-raj-pink">2026</span>
+                </h1>
+            </div>
+
+            <!-- Dots Indicator (Optional, added for UX) -->
+            <div class="flex justify-center space-x-2 mt-6">
+                <button onclick="scrollToSlide(0)" class="w-2 h-2 rounded-full bg-raj-royal opacity-50 hover:opacity-100 transition-opacity" aria-label="Jan"></button>
+                <button onclick="scrollToSlide(1)" class="w-2 h-2 rounded-full bg-raj-royal opacity-50 hover:opacity-100 transition-opacity" aria-label="Feb"></button>
+                <button onclick="scrollToSlide(2)" class="w-2 h-2 rounded-full bg-raj-royal opacity-50 hover:opacity-100 transition-opacity" aria-label="Mar"></button>
+                <button onclick="scrollToSlide(3)" class="w-2 h-2 rounded-full bg-raj-royal opacity-50 hover:opacity-100 transition-opacity" aria-label="Apr"></button>
+                <button onclick="scrollToSlide(4)" class="w-2 h-2 rounded-full bg-raj-royal opacity-50 hover:opacity-100 transition-opacity" aria-label="May"></button>
+                <button onclick="scrollToSlide(5)" class="w-2 h-2 rounded-full bg-raj-royal opacity-50 hover:opacity-100 transition-opacity" aria-label="Jun"></button>
+                <button onclick="scrollToSlide(6)" class="w-2 h-2 rounded-full bg-raj-royal opacity-50 hover:opacity-100 transition-opacity" aria-label="Jul"></button>
+                <button onclick="scrollToSlide(7)" class="w-2 h-2 rounded-full bg-raj-royal opacity-50 hover:opacity-100 transition-opacity" aria-label="Aug"></button>
+                <button onclick="scrollToSlide(8)" class="w-2 h-2 rounded-full bg-raj-royal opacity-50 hover:opacity-100 transition-opacity" aria-label="Sep"></button>
+                <button onclick="scrollToSlide(9)" class="w-2 h-2 rounded-full bg-raj-royal opacity-50 hover:opacity-100 transition-opacity" aria-label="Oct"></button>
+                <button onclick="scrollToSlide(10)" class="w-2 h-2 rounded-full bg-raj-royal opacity-50 hover:opacity-100 transition-opacity" aria-label="Nov"></button>
+                <button onclick="scrollToSlide(11)" class="w-2 h-2 rounded-full bg-raj-royal opacity-50 hover:opacity-100 transition-opacity" aria-label="Dec"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Month Grid Navigation (Small) -->
+    <div class="bg-white border-y border-gray-100 sticky top-16 z-30 shadow-sm hidden lg:block">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <div class="flex justify-between text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                <a href="javascript:scrollToSlide(0)" class="hover:text-raj-pink transition-colors">Jan</a>
+                <a href="javascript:scrollToSlide(1)" class="hover:text-raj-pink transition-colors">Feb</a>
+                <a href="javascript:scrollToSlide(2)" class="hover:text-raj-pink transition-colors">Mar</a>
+                <a href="javascript:scrollToSlide(3)" class="hover:text-raj-pink transition-colors">Apr</a>
+                <a href="javascript:scrollToSlide(4)" class="hover:text-raj-pink transition-colors">May</a>
+                <a href="javascript:scrollToSlide(5)" class="hover:text-raj-pink transition-colors">Jun</a>
+                <a href="javascript:scrollToSlide(6)" class="hover:text-raj-pink transition-colors">Jul</a>
+                <a href="javascript:scrollToSlide(7)" class="hover:text-raj-pink transition-colors">Aug</a>
+                <a href="javascript:scrollToSlide(8)" class="hover:text-raj-pink transition-colors">Sep</a>
+                <a href="javascript:scrollToSlide(9)" class="hover:text-raj-pink transition-colors">Oct</a>
+                <a href="javascript:scrollToSlide(10)" class="hover:text-raj-pink transition-colors">Nov</a>
+                <a href="javascript:scrollToSlide(11)" class="hover:text-raj-pink transition-colors">Dec</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content: Calendar Grid (Alternative View) -->
+    <main id="calendar-grid" class="py-16 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 font-hindi">All Months Overview</h2>
+                <div class="w-20 h-1 bg-raj-pink mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Simplified Grid Layout -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Using Loop Logic Simplicity for Static File -->
+                <button onclick="scrollToSlide(0)" class="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-all border border-gray-100">
+                    <img src="Images/January.jpg" class="w-full h-full object-cover" alt="Jan Thumbnail">
+                    <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-sm font-bold">January</div>
+                </button>
+                <button onclick="scrollToSlide(1)" class="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-all border border-gray-100">
+                    <img src="Images/February.jpg" class="w-full h-full object-cover" alt="Feb Thumbnail">
+                    <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-sm font-bold">February</div>
+                </button>
+                 <button onclick="scrollToSlide(2)" class="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-all border border-gray-100">
+                    <img src="Images/March.jpg" class="w-full h-full object-cover" alt="Mar Thumbnail">
+                    <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-sm font-bold">March</div>
+                </button>
+                <button onclick="scrollToSlide(3)" class="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-all border border-gray-100">
+                    <img src="Images/April.jpg" class="w-full h-full object-cover" alt="Apr Thumbnail">
+                    <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-sm font-bold">April</div>
+                </button>
+                 <button onclick="scrollToSlide(4)" class="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-all border border-gray-100">
+                    <img src="Images/May.jpg" class="w-full h-full object-cover" alt="May Thumbnail">
+                    <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-sm font-bold">May</div>
+                </button>
+                <button onclick="scrollToSlide(5)" class="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-all border border-gray-100">
+                    <img src="Images/June.jpg" class="w-full h-full object-cover" alt="Jun Thumbnail">
+                    <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-sm font-bold">June</div>
+                </button>
+                 <button onclick="scrollToSlide(6)" class="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-all border border-gray-100">
+                    <img src="Images/July.jpg" class="w-full h-full object-cover" alt="Jul Thumbnail">
+                    <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-sm font-bold">July</div>
+                </button>
+                <button onclick="scrollToSlide(7)" class="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-all border border-gray-100">
+                    <img src="Images/August.jpg" class="w-full h-full object-cover" alt="Aug Thumbnail">
+                    <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-sm font-bold">August</div>
+                </button>
+                 <button onclick="scrollToSlide(8)" class="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-all border border-gray-100">
+                    <img src="Images/September.jpg" class="w-full h-full object-cover" alt="Sep Thumbnail">
+                    <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-sm font-bold">September</div>
+                </button>
+                <button onclick="scrollToSlide(9)" class="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-all border border-gray-100">
+                    <img src="Images/October.jpg" class="w-full h-full object-cover" alt="Oct Thumbnail">
+                    <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-sm font-bold">October</div>
+                </button>
+                 <button onclick="scrollToSlide(10)" class="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-all border border-gray-100">
+                    <img src="Images/November.jpg" class="w-full h-full object-cover" alt="Nov Thumbnail">
+                    <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-sm font-bold">November</div>
+                </button>
+                <button onclick="scrollToSlide(11)" class="group relative aspect-[3/4] overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-all border border-gray-100">
+                    <img src="Images/December.jpg" class="w-full h-full object-cover" alt="Dec Thumbnail">
+                    <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-sm font-bold">December</div>
+                </button>
+            </div>
+            
+            <div class="text-center mt-8">
+                 <p class="text-sm text-gray-500">Tap any month to view in slider</p>
+            </div>
+        </div>
+    </main>
+
+ <section id="holidays" class="bg-raj-sand py-16 border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <h2 class="text-3xl font-bold text-raj-stone mb-6 font-hindi text-center">
+      Rajasthan Government Calendar 2026 – Holidays List
+    </h2>
+
+    <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">
+      The <strong>Rajasthan Government Calendar 2026</strong> includes all
+      <strong>Gazetted (Public) Holidays</strong> and
+      <strong>Restricted (Optional) Holidays</strong> officially declared by the
+      Government of Rajasthan. This page is useful for government employees,
+      schools, banks, and the general public.
+    </p>
+
+    <h3 class="text-2xl font-semibold text-raj-stone mb-4 font-hindi">
+      सार्वजनिक अवकाश (Gazetted Holidays)
+    </h3>
+
+    <div class="overflow-x-auto mb-12">
+      <table class="min-w-full border border-gray-300 bg-white text-sm">
+        <thead class="bg-raj-maroon text-black">
+          <tr>
+            <th class="border px-3 py-2 text-left">No.</th>
+            <th class="border px-3 py-2 text-left">Holiday</th>
+            <th class="border px-3 py-2 text-left">Date</th>
+            <th class="border px-3 py-2 text-left">Day</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">1</td><td class="border px-3 py-2">Devnarayan Jayanti</td><td class="border px-3 py-2">25.01.2026</td><td class="border px-3 py-2">Sunday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">2</td><td class="border px-3 py-2">Republic Day</td><td class="border px-3 py-2">26.01.2026</td><td class="border px-3 py-2">Monday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">3</td><td class="border px-3 py-2">Maha Shivaratri</td><td class="border px-3 py-2">15.02.2026</td><td class="border px-3 py-2">Sunday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">4</td><td class="border px-3 py-2">Holika Dahan</td><td class="border px-3 py-2">02.03.2026</td><td class="border px-3 py-2">Monday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">5</td><td class="border px-3 py-2">Dhulandi (Holi)</td><td class="border px-3 py-2">03.03.2026</td><td class="border px-3 py-2">Tuesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">6</td><td class="border px-3 py-2">Chetichand</td><td class="border px-3 py-2">20.03.2026</td><td class="border px-3 py-2">Friday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">7</td><td class="border px-3 py-2">Eid-ul-Fitr</td><td class="border px-3 py-2">21.03.2026</td><td class="border px-3 py-2">Saturday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">8</td><td class="border px-3 py-2">Ram Navami</td><td class="border px-3 py-2">26.03.2026</td><td class="border px-3 py-2">Thursday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">9</td><td class="border px-3 py-2">Mahavir Jayanti</td><td class="border px-3 py-2">31.03.2026</td><td class="border px-3 py-2">Tuesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">10</td><td class="border px-3 py-2">Good Friday</td><td class="border px-3 py-2">03.04.2026</td><td class="border px-3 py-2">Friday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">11</td><td class="border px-3 py-2">Mahatma Jyotiba Phule Jayanti</td><td class="border px-3 py-2">11.04.2026</td><td class="border px-3 py-2">Saturday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">12</td><td class="border px-3 py-2">Dr. Ambedkar Jayanti</td><td class="border px-3 py-2">14.04.2026</td><td class="border px-3 py-2">Tuesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">13</td><td class="border px-3 py-2">Parshuram Jayanti</td><td class="border px-3 py-2">19.04.2026</td><td class="border px-3 py-2">Sunday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">14</td><td class="border px-3 py-2">Eid-ul-Zuha (Bakrid)</td><td class="border px-3 py-2">28.05.2026</td><td class="border px-3 py-2">Thursday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">15</td><td class="border px-3 py-2">Maharana Pratap Jayanti</td><td class="border px-3 py-2">17.06.2026</td><td class="border px-3 py-2">Wednesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">16</td><td class="border px-3 py-2">Moharram (Tazia)</td><td class="border px-3 py-2">26.06.2026</td><td class="border px-3 py-2">Friday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">17</td><td class="border px-3 py-2">World Tribal Day</td><td class="border px-3 py-2">09.08.2026</td><td class="border px-3 py-2">Sunday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">18</td><td class="border px-3 py-2">Independence Day</td><td class="border px-3 py-2">15.08.2026</td><td class="border px-3 py-2">Saturday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">19</td><td class="border px-3 py-2">Barawafat</td><td class="border px-3 py-2">26.08.2026</td><td class="border px-3 py-2">Wednesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">20</td><td class="border px-3 py-2">Raksha Bandhan</td><td class="border px-3 py-2">28.08.2026</td><td class="border px-3 py-2">Friday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">21</td><td class="border px-3 py-2">Shri Krishna Janmashtami</td><td class="border px-3 py-2">04.09.2026</td><td class="border px-3 py-2">Friday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">22</td><td class="border px-3 py-2">Ramdev Jayanti / Teja Dashmi</td><td class="border px-3 py-2">21.09.2026</td><td class="border px-3 py-2">Monday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">23</td><td class="border px-3 py-2">Mahatma Gandhi Jayanti</td><td class="border px-3 py-2">02.10.2026</td><td class="border px-3 py-2">Friday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">24</td><td class="border px-3 py-2">Navratra Sthapana & Maharaja Agrasen Jayanti</td><td class="border px-3 py-2">11.10.2026</td><td class="border px-3 py-2">Sunday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">25</td><td class="border px-3 py-2">Durgashtami</td><td class="border px-3 py-2">19.10.2026</td><td class="border px-3 py-2">Monday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">26</td><td class="border px-3 py-2">Vijay Dashami</td><td class="border px-3 py-2">20.10.2026</td><td class="border px-3 py-2">Tuesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">27</td><td class="border px-3 py-2">Deepawali</td><td class="border px-3 py-2">08.11.2026</td><td class="border px-3 py-2">Sunday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">28</td><td class="border px-3 py-2">Govardhan Puja</td><td class="border px-3 py-2">09.11.2026</td><td class="border px-3 py-2">Monday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">29</td><td class="border px-3 py-2">Bhai Dooj</td><td class="border px-3 py-2">11.11.2026</td><td class="border px-3 py-2">Wednesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">30</td><td class="border px-3 py-2">Guru Nanak Jayanti</td><td class="border px-3 py-2">24.11.2026</td><td class="border px-3 py-2">Tuesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">31</td><td class="border px-3 py-2">Christmas Day</td><td class="border px-3 py-2">25.12.2026</td><td class="border px-3 py-2">Friday</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-raj-stone mb-4 font-hindi">
+      ऐच्छिक अवकाश (Restricted Holidays – RH)
+    </h3>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-gray-300 bg-white text-sm">
+        <thead class="bg-raj-maroon text-black">
+          <tr>
+             <th class="border px-3 py-2 text-left">No.</th>
+            <th class="border px-3 py-2 text-left">Holiday</th>
+            <th class="border px-3 py-2 text-left">Date</th>
+            <th class="border px-3 py-2 text-left">Day</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">1</td><td class="border px-3 py-2">Christian New Year Day</td><td class="border px-3 py-2">01.01.2026</td><td class="border px-3 py-2">Thursday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">2</td><td class="border px-3 py-2">Lohri</td><td class="border px-3 py-2">13.01.2026</td><td class="border px-3 py-2">Tuesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">3</td><td class="border px-3 py-2">Vishwakarma Jayanti</td><td class="border px-3 py-2">31.01.2026</td><td class="border px-3 py-2">Saturday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">4</td><td class="border px-3 py-2">Swami Ramcharan Jayanti</td><td class="border px-3 py-2">31.01.2026</td><td class="border px-3 py-2">Saturday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">5</td><td class="border px-3 py-2">Guru Ravidas Jayanti</td><td class="border px-3 py-2">01.02.2026</td><td class="border px-3 py-2">Sunday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">6</td><td class="border px-3 py-2">Shab-e-Barat</td><td class="border px-3 py-2">03.02.2026</td><td class="border px-3 py-2">Tuesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">7</td><td class="border px-3 py-2">Maharishi Dayanand Saraswati Jayanti</td><td class="border px-3 py-2">12.02.2026</td><td class="border px-3 py-2">Thursday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">8</td><td class="border px-3 py-2">Gadge Maharaj Jayanti</td><td class="border px-3 py-2">23.02.2026</td><td class="border px-3 py-2">Monday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">9</td><td class="border px-3 py-2">Jumatulvida</td><td class="border px-3 py-2">20.03.2026</td><td class="border px-3 py-2">Friday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">10</td><td class="border px-3 py-2">Vaisakhi</td><td class="border px-3 py-2">14.04.2026</td><td class="border px-3 py-2">Tuesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">11</td><td class="border px-3 py-2">Sain Jayanti</td><td class="border px-3 py-2">14.04.2026</td><td class="border px-3 py-2">Tuesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">12</td><td class="border px-3 py-2">Buddha Purnima</td><td class="border px-3 py-2">01.05.2026</td><td class="border px-3 py-2">Friday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">13</td><td class="border px-3 py-2">Guru Purnima</td><td class="border px-3 py-2">29.07.2026</td><td class="border px-3 py-2">Wednesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">14</td><td class="border px-3 py-2">Thadadi</td><td class="border px-3 py-2">03.09.2026</td><td class="border px-3 py-2">Thursday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">15</td><td class="border px-3 py-2">Ganesh Chaturthi</td><td class="border px-3 py-2">14.09.2026</td><td class="border px-3 py-2">Monday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">16</td><td class="border px-3 py-2">Samvatsari</td><td class="border px-3 py-2">16.09.2026</td><td class="border px-3 py-2">Wednesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">17</td><td class="border px-3 py-2">Anant Chaturdashi</td><td class="border px-3 py-2">25.09.2026</td><td class="border px-3 py-2">Friday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">18</td><td class="border px-3 py-2">Mahanavami</td><td class="border px-3 py-2">20.10.2026</td><td class="border px-3 py-2">Tuesday</td></tr>
+          <tr class="cursor-pointer hover:bg-orange-100 transition-colors holiday-row"><td class="border px-3 py-2">19</td><td class="border px-3 py-2">Karwa Chauth</td><td class="border px-3 py-2">29.10.2026</td><td class="border px-3 py-2">Thursday</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-gray-600 mt-10 max-w-4xl mx-auto text-center">
+      This Rajasthan Calendar 2026 is published for informational purposes.
+      Dates are based on official government notifications. Users are advised to
+      verify holidays with their respective departments if required.
+    </p>
+
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+            <div class="mb-4 md:mb-0">
+                <p>&copy; 2025-2026 Rajasthan Calendar Portal.</p>
+                <p class="mt-1 text-xs text-gray-500">Information sourced from public domain government circulars.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+
+        // --- Slider Logic ---
+        const slider = document.getElementById('calendar-slider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        // Scroll to specific slide index
+        window.scrollToSlide = (index) => {
+            const slide = document.getElementById(`slide-${index}`);
+            if (slide) {
+                // Scroll slider to this element
+                slider.scrollTo({
+                    left: slide.offsetLeft,
+                    behavior: 'smooth'
+                });
+                // Also scroll page to the slider section so user sees it
+                const sliderSection = document.getElementById('slider-section');
+                sliderSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+
+        // Button Controls
+        nextBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
+        });
+        prevBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
+        });
+
+        // Initialize: Scroll to Current Month on Load
+        window.addEventListener('load', () => {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth(); // 0 = Jan, 11 = Dec
+
+            if (year === 2026) {
+                // If we are actually in 2026, show current month
+                // Use setTimeout to ensure layout is ready
+                setTimeout(() => {
+                    const slide = document.getElementById(`slide-${month}`);
+                    if (slide) slider.scrollTo({ left: slide.offsetLeft, behavior: 'auto' });
+                }, 100);
+            } else {
+                // If 2025 or other, show January (Slide 0)
+                // Default is 0, so no action needed, but we can force it
+            }
+        });
+    </script>
+
+
+<script>
+    
+    // ==========================================
+    // NEW: Table Click to Jump Logic
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select all rows with class 'holiday-row'
+        const holidayRows = document.querySelectorAll('.holiday-row');
+        
+        holidayRows.forEach(row => {
+            row.addEventListener('click', function() {
+                // Get the text from the 3rd column (Date) - Index 2
+                // Example format: "25.01.2026"
+                const dateCell = this.children[2]; 
+                
+                if (dateCell) {
+                    const dateText = dateCell.innerText.trim();
+                    const dateParts = dateText.split('.'); // Split by dots
+                    
+                    // Ensure we have a valid date format (DD.MM.YYYY)
+                    if (dateParts.length >= 2) {
+                        // dateParts[1] is the month (01 to 12)
+                        // Subtract 1 because scrollToSlide expects 0-11
+                        const monthIndex = parseInt(dateParts[1], 10) - 1;
+                        
+                        // Call the existing function to jump
+                        if (!isNaN(monthIndex)) {
+                            window.scrollToSlide(monthIndex);
+                        }
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+
+</html>
