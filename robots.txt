@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /pdf/temp/
+Disallow: /admin/
+
+Sitemap: https://rajcalendar.in/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
