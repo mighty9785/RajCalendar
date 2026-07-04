@@ -1,0 +1,73 @@
+:root {
+  color-scheme: light;
+  --raj-pink: #be123c;
+  --raj-royal: #1e3a8a;
+  --raj-sand: #fdfbf7;
+  --raj-stone: #78350f;
+  --raj-gold: #d4af37;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --border: #e5e7eb;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background: var(--raj-sand);
+  color: var(--text);
+}
+
+.site-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,250,252,0.96));
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+}
+
+.article-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.12);
+}
+
+.article-card .category-pill {
+  background: rgba(190, 18, 60, 0.08);
+  color: var(--raj-pink);
+  border: 1px solid rgba(190, 18, 60, 0.16);
+}
+
+.prose h2,
+.prose h3 {
+  color: var(--raj-royal);
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose p,
+.prose li {
+  color: #374151;
+  line-height: 1.8;
+  margin-bottom: 0.9rem;
+}
+
+.prose ul {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.hero-accent {
+  background: linear-gradient(90deg, rgba(190, 18, 60, 0.12), rgba(30, 58, 138, 0.12));
+}
+
+.footer-link:hover {
+  color: #fff;
+}

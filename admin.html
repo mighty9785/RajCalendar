@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Article Admin | RajGov Calendar</title>
+  <meta name="description" content="Create and export articles for the Rajasthan holiday blog using a local static JSON workflow.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="site-shell bg-raj-sand text-gray-800" data-page="admin">
+  <header class="bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-raj-pink">Static Content Admin</p>
+        <h1 class="text-2xl font-bold text-gray-900">Create deep holiday articles and export articles.json</h1>
+      </div>
+      <div class="flex gap-3">
+        <a href="index.html" class="inline-flex items-center rounded-full border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-raj-pink hover:text-raj-pink">Back to site</a>
+        <a href="pages/article.html?slug=rajasthan-2026-public-holidays-guide" class="inline-flex items-center rounded-full bg-raj-royal px-4 py-2 text-sm font-semibold text-white hover:bg-raj-pink">Preview blog</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 py-10">
+    <div class="max-w-7xl mx-auto px-4 grid gap-8 lg:grid-cols-[1.25fr_0.75fr]">
+      <section class="section-card rounded-3xl p-6 md:p-8">
+        <div class="mb-6">
+          <h2 class="text-2xl font-bold text-gray-900">Article Builder</h2>
+          <p class="mt-2 text-gray-600">Every draft is saved in your browser and can be exported as a production-ready articles.json file.</p>
+        </div>
+
+        <form id="article-form" class="space-y-5">
+          <div class="grid md:grid-cols-2 gap-5">
+            <label class="block">
+              <span class="mb-2 block text-sm font-semibold text-gray-700">Title</span>
+              <input id="title" name="title" type="text" class="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-raj-pink focus:outline-none" placeholder="Rajasthan holiday guide 2026" required>
+            </label>
+            <label class="block">
+              <span class="mb-2 block text-sm font-semibold text-gray-700">URL slug</span>
+              <input id="slug" name="slug" type="text" class="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-raj-pink focus:outline-none" placeholder="rajasthan-holiday-guide" required>
+            </label>
+          </div>
+
+          <label class="block">
+            <span class="mb-2 block text-sm font-semibold text-gray-700">Meta description</span>
+            <textarea id="metaDescription" name="metaDescription" rows="3" class="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-raj-pink focus:outline-none" placeholder="Briefly describe the article for search engines and social sharing."></textarea>
+          </label>
+
+          <label class="block">
+            <span class="mb-2 block text-sm font-semibold text-gray-700">Category</span>
+            <select id="category" name="category" class="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-raj-pink focus:outline-none">
+              <option>Public Holidays</option>
+              <option>Bank Holidays</option>
+              <option>Cultural Festivals</option>
+              <option>Guides</option>
+              <option>News & Updates</option>
+            </select>
+          </label>
+
+          <div>
+            <label class="mb-2 block text-sm font-semibold text-gray-700">Article content</label>
+            <div id="editor" class="min-h-[280px] rounded-xl border border-gray-300 bg-white"></div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <button id="save-article" type="button" class="rounded-full bg-raj-pink px-5 py-3 text-sm font-semibold text-white hover:bg-raj-royal">Save article to list</button>
+            <button id="export-json" type="button" class="rounded-full border border-raj-pink px-5 py-3 text-sm font-semibold text-raj-pink hover:bg-raj-pink hover:text-white">Download articles.json</button>
+            <button id="copy-json" type="button" class="rounded-full border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-700 hover:border-raj-royal hover:text-raj-royal">Copy JSON</button>
+          </div>
+
+          <p id="form-status" class="rounded-xl border border-dashed border-gray-300 bg-gray-50 p-3 text-sm text-gray-600">Drafts are stored locally in your browser until you export them.</p>
+        </form>
+      </section>
+
+      <aside class="space-y-6">
+        <section class="section-card rounded-3xl p-6">
+          <h2 class="text-xl font-bold text-gray-900">Local storage workflow</h2>
+          <ul class="mt-4 space-y-3 text-sm text-gray-600">
+            <li>• Drafts auto-save while you type.</li>
+            <li>• Save articles locally to build your content library.</li>
+            <li>• Export the complete JSON array for the live site.</li>
+          </ul>
+        </section>
+
+        <section class="section-card rounded-3xl p-6">
+          <h2 class="text-xl font-bold text-gray-900">Saved article list</h2>
+          <ul id="article-list-preview" class="mt-4 space-y-2"></ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

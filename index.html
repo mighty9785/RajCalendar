@@ -31,6 +31,7 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QB61NGTG6D"></script>
@@ -150,14 +151,15 @@
         <span class="font-bold text-lg md:text-xl text-raj-royal tracking-tight">RajGov<span class="text-raj-pink">Calendar</span></span>
       </div>
 
-      <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
-        <a href="#slider-section" class="hover:text-raj-pink transition-colors">Current Month</a>
-        <a href="#calendar-grid" class="hover:text-raj-pink transition-colors">All Months</a>
+      <div class="hidden md:flex items-center space-x-6 text-sm font-semibold text-gray-600">
+        <a href="#slider-section" class="hover:text-raj-pink transition-colors">Calendar</a>
+        <a href="#calendar-grid" class="hover:text-raj-pink transition-colors">Months</a>
+        <a href="#blog-section" class="hover:text-raj-pink transition-colors">Blog</a>
         <a href="#holidays" class="hover:text-raj-pink transition-colors">Holidays</a>
-        <a href="pages/holidays-guide.html" class="hover:text-raj-pink transition-colors">Holiday Guide</a>
+        <a href="pages/holidays-guide.html" class="hover:text-raj-pink transition-colors">Guide</a>
         <a href="pages/faq.html" class="hover:text-raj-pink transition-colors">FAQ</a>
-        <a href="pages/about.html" class="hover:text-raj-pink transition-colors">About</a>
-        <a href="Pdf/RajsathanGovernmentCalender2026.pdf" class="px-4 py-2 bg-raj-royal  text-white rounded-lg hover:bg-raj-royal transition-colors shadow-md">Download PDF</a>
+        <a href="pages/privacy-policy.html" class="hover:text-raj-pink transition-colors">Privacy</a>
+        <a href="Pdf/RajsathanGovernmentCalender2026.pdf" class="px-4 py-2 bg-raj-royal text-white rounded-lg hover:bg-raj-royal transition-colors shadow-md">Download PDF</a>
       </div>
 
       <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-raj-pink focus:outline-none">
@@ -169,12 +171,14 @@
 
   <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
     <div class="flex flex-col px-4 py-4 space-y-4 font-medium">
-      <a href="#slider-section" class="block text-gray-600 hover:text-raj-pink">Current Month</a>
-      <a href="#calendar-grid" class="block text-gray-600 hover:text-raj-pink">All Months</a>
+      <a href="#slider-section" class="block text-gray-600 hover:text-raj-pink">Calendar</a>
+      <a href="#calendar-grid" class="block text-gray-600 hover:text-raj-pink">Months</a>
+      <a href="#blog-section" class="block text-gray-600 hover:text-raj-pink">Blog</a>
       <a href="#holidays" class="block text-gray-600 hover:text-raj-pink">Holidays</a>
-      <a href="pages/holidays-guide.html" class="block text-gray-600 hover:text-raj-pink">Holiday Guide</a>
+      <a href="pages/holidays-guide.html" class="block text-gray-600 hover:text-raj-pink">Guide</a>
       <a href="pages/faq.html" class="block text-gray-600 hover:text-raj-pink">FAQ</a>
-      <a href="pages/about.html" class="block text-gray-600 hover:text-raj-pink">About</a>
+      <a href="pages/about-us.html" class="block text-gray-600 hover:text-raj-pink">About</a>
+      <a href="pages/privacy-policy.html" class="block text-gray-600 hover:text-raj-pink">Privacy</a>
       <a href="Pdf/RajsathanGovernmentCalender2026.pdf" class="block text-center w-full py-2 bg-raj-pink text-white rounded-lg">Download PDF</a>
     </div>
   </div>
@@ -576,6 +580,20 @@
     </div>
 </section>
 <!-- END FAQ SECTION -->
+    <section id="blog-section" class="bg-white py-16 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10">
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-raj-pink">Latest Updates & Holiday Guides</p>
+                <h2 class="mt-3 text-3xl font-bold text-gray-900">Helpful articles for Rajasthan holiday planning</h2>
+                <p class="mt-4 text-gray-600 max-w-3xl mx-auto">This static blog section grows with new articles and gives Google crawlers richer, more valuable content to index.</p>
+            </div>
+            <div id="blog-list" class="grid gap-6 md:grid-cols-2"></div>
+            <div class="mt-8 text-center">
+                <a href="admin.html" class="inline-flex items-center rounded-full bg-raj-royal px-5 py-3 text-sm font-semibold text-white hover:bg-raj-pink">Open article admin</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800 mt-auto">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
@@ -583,14 +601,18 @@
                 <p>&copy; 2025-2026 Rajasthan Calendar Portal.</p>
                 <p class="mt-1 text-xs text-gray-500">Information sourced from public domain government circulars.</p>
             </div>
-            <div class="flex space-x-6">
-                <a href="#" class="hover:text-white transition-colors">Privacy</a>
-                <a href="#" class="hover:text-white transition-colors">Terms</a>
+            <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+                <a href="pages/privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="pages/terms-conditions.html" class="hover:text-white transition-colors">Terms</a>
+                <a href="pages/disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a>
+                <a href="pages/about-us.html" class="hover:text-white transition-colors">About</a>
+                <a href="pages/contact.html" class="hover:text-white transition-colors">Contact</a>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
+    <script src="app.js"></script>
     <script>
         // Initialize Icons
         lucide.createIcons();
