@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles | Rajasthan Calendar</title>
+  <meta name="description" content="Browse practical articles about Rajasthan holidays, planning tips, and official calendar guidance.">
+  <link rel="canonical" href="https://rajcalendar.in/articles/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Articles | Rajasthan Calendar">
+  <meta property="og:description" content="Browse practical articles about Rajasthan holidays, planning tips, and official calendar guidance.">
+  <meta property="og:image" content="https://rajcalendar.in/assets/January_ljqasq.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .article-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .article-card:hover { transform: translateY(-2px); }
+  </style>
+</head>
+<body class="bg-raj-sand text-gray-800 font-sans min-h-screen flex flex-col">
+  <div id="header-container"></div>
+
+  <main class="flex-1 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-8 text-center md:text-left">
+        <p class="text-sm uppercase tracking-[0.25em] text-raj-pink font-semibold">Articles</p>
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Explore Rajasthan holiday insights</h1>
+        <p class="mt-4 text-lg text-gray-600 max-w-3xl">Discover practical guides, planning tips, and helpful updates about Rajasthan government holidays and public observances.</p>
+      </div>
+
+      <div class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div class="w-full lg:max-w-md">
+          <label class="sr-only" for="article-search">Search articles</label>
+          <input id="article-search" type="search" placeholder="Search by title or keyword" class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-raj-pink">
+        </div>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <label class="text-sm font-semibold text-gray-700" for="category-filter">Category</label>
+          <select id="category-filter" class="rounded-lg border border-gray-300 bg-white px-3 py-2 shadow-sm">
+            <option value="all">All Categories</option>
+          </select>
+          <label class="text-sm font-semibold text-gray-700" for="sort-filter">Sort</label>
+          <select id="sort-filter" class="rounded-lg border border-gray-300 bg-white px-3 py-2 shadow-sm">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="popular">Most Popular</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="articles-grid" class="grid gap-6 md:grid-cols-2 xl:grid-cols-3"></div>
+      <div class="mt-8 flex justify-center">
+        <button id="load-more-btn" class="hidden rounded-full bg-raj-royal px-6 py-3 text-white font-semibold shadow-sm hover:bg-raj-pink transition-colors">Load More</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="../js/components.js"></script>
+  <script src="../js/articles.js"></script>
+</body>
+</html>

@@ -153,22 +153,7 @@
 </head>
 <body class="bg-raj-sand text-gray-800 font-sans smooth-scroll antialiased flex flex-col min-h-screen">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-orange-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-2">
-                    <span class="font-bold text-lg md:text-xl text-raj-royal tracking-tight">RajGov<span class="text-raj-pink">Calendar</span></span>
-                </div>
-                <div class="hidden md:flex items-center space-x-6 text-sm font-semibold">
-                    <a href="../index.html" class="text-gray-600 hover:text-raj-pink transition-colors">Home</a>
-                    <a href="holidays-guide.html" class="text-gray-600 hover:text-raj-pink transition-colors">Holidays Guide</a>
-                    <a href="faq.html" class="text-raj-pink">FAQ</a>
-                    <a href="../index.html#holidays" class="px-4 py-2 bg-raj-royal text-white rounded-lg hover:bg-raj-royal transition-colors">Back to Calendar</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div id="header-container"></div>
 
     <!-- Main Content -->
     <main class="flex-grow py-16 bg-white">
@@ -441,12 +426,7 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 text-center text-sm">
-            <p>&copy; 2025-2026 Rajasthan Calendar Portal. Information sourced from official government notifications.</p>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
 
     <script>
         lucide.createIcons();
@@ -455,5 +435,6 @@
             element.classList.toggle('active');
         }
     </script>
+    <script src="../js/components.js"></script>
 </body>
 </html>

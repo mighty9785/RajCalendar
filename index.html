@@ -208,51 +208,7 @@
 </head>
 <body class="bg-raj-sand text-gray-800 font-sans smooth-scroll antialiased selection:bg-raj-pink selection:text-white flex flex-col min-h-screen">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-orange-100 shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center">
-      
-      <div class="flex items-center space-x-2">
-        <div class="w-8 h-8  rounded-full flex items-center justify-center overflow-hidden p-1">
-    <img
-      src="assets/Governmentlogo_rjlhm1.png"
-      alt="Satyameva Jayate Emblem"
-      class="w-full h-full object-contain"
-    >
-</div>
-        <span class="font-bold text-lg md:text-xl text-raj-royal tracking-tight">RajGov<span class="text-raj-pink">Calendar</span></span>
-      </div>
-
-      <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
-        <a href="#slider-section" class="hover:text-raj-pink transition-colors">Current Month</a>
-        <a href="#calendar-grid" class="hover:text-raj-pink transition-colors">All Months</a>
-        <a href="#holidays" class="hover:text-raj-pink transition-colors">Holidays</a>
-        <a href="pages/holidays-guide.html" class="hover:text-raj-pink transition-colors">Holiday Guide</a>
-        <a href="pages/faq.html" class="hover:text-raj-pink transition-colors">FAQ</a>
-        <a href="pages/about.html" class="hover:text-raj-pink transition-colors">About</a>
-        <a href="Pdf/RajsathanGovernmentCalender2026.pdf" class="px-4 py-2 bg-raj-royal  text-white rounded-lg hover:bg-raj-royal transition-colors shadow-md">Download PDF</a>
-      </div>
-
-      <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-raj-pink focus:outline-none">
-        <i data-lucide="menu" class="w-6 h-6"></i>
-      </button>
-
-    </div>
-  </div>
-
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
-    <div class="flex flex-col px-4 py-4 space-y-4 font-medium">
-      <a href="#slider-section" class="block text-gray-600 hover:text-raj-pink">Current Month</a>
-      <a href="#calendar-grid" class="block text-gray-600 hover:text-raj-pink">All Months</a>
-      <a href="#holidays" class="block text-gray-600 hover:text-raj-pink">Holidays</a>
-      <a href="pages/holidays-guide.html" class="block text-gray-600 hover:text-raj-pink">Holiday Guide</a>
-      <a href="pages/faq.html" class="block text-gray-600 hover:text-raj-pink">FAQ</a>
-      <a href="pages/about.html" class="block text-gray-600 hover:text-raj-pink">About</a>
-      <a href="Pdf/RajsathanGovernmentCalender2026.pdf" class="block text-center w-full py-2 bg-raj-pink text-white rounded-lg">Download PDF</a>
-    </div>
-  </div>
-</nav>
+    <div id="header-container"></div>
 
     <!-- Main Slider Section (Hero) -->
     <section id="slider-section" class="relative bg-gradient-to-b from-orange-50 to-raj-sand pt-6 pb-12 overflow-hidden min-h-[85vh] flex flex-col justify-center">
@@ -695,29 +651,12 @@
     </div>
 </section>
 <!-- END FAQ SECTION -->
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
-            <div class="mb-4 md:mb-0">
-                <p>&copy; 2025-2026 Rajasthan Calendar Portal.</p>
-                <p class="mt-1 text-xs text-gray-500">Information sourced from public domain government circulars.</p>
-            </div>
-            <div class="flex space-x-6">
-                <a href="#" class="hover:text-white transition-colors">Privacy</a>
-                <a href="#" class="hover:text-white transition-colors">Terms</a>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
 
     <!-- Scripts -->
     <script>
         // Initialize Icons
         lucide.createIcons();
-
-        // Mobile Menu
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
 
         // --- Slider Logic ---
         const slider = document.getElementById('calendar-slider');
@@ -803,6 +742,7 @@
         });
     });
 </script>
+    <script src="js/components.js"></script>
 </body>
 
 </html>
