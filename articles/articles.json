@@ -26,5 +26,19 @@
     "image": "../assets/articleimage/rajasthan-ras-exam-2026-complete-guide.jpg",
     "featured": true,
     "popular": true
+  },
+  {
+    "id": "db63b0aa-3358-4ca8-b354-34ec4d8ee59d",
+    "title": "New test article",
+    "slug": "newtestarticle",
+    "excerpt": "newdnd",
+    "content": "dgsdgsd",
+    "author": "Manoj das swami",
+    "date": "2026-07-09",
+    "category": "Eductation",
+    "readingTime": "1 min read",
+    "image": "../assets/articleimage/newtestarticle.png",
+    "featured": true,
+    "popular": false
   }
 ]
